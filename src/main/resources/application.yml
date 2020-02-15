@@ -1,0 +1,36 @@
+server:
+  port: 8888
+spring:
+  application:
+    name:
+      ezSpel
+  jpa:
+    open-in-view: true
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+    health:
+      show-details: always
+    jolokia:
+      config:8888
+        debug: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,beans,jolokia,env
+
+keywords:
+  blacklist:
+    - java.+lang
+    - Runtime
+    - exec.*\(
+    - getClass
+    - forName
+
+user:
+  username: admin
+  password: admin
+  encParam1: hell0toth1sg4me1
+  encParam2: 123456789abcdefg
+  test: hello
